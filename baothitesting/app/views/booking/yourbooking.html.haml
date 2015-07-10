@@ -1,0 +1,22 @@
+%h2 Your bookings
+- if @bookings
+  %table.table.table-condensed
+    %tr
+      %th.center Date
+      %th.center Taxi company
+      %th.center Seater number
+      %th.center Location
+
+    - @bookings.each do |booking|
+      %tr
+        %td
+          - date = booking["created_at"].to_datetime.strftime(I18n.t("time.format_normal"))
+          = link_to date, booking_show_path(:booking_id => booking["id"])
+        %td.left
+          = booking["driver"]["company"]
+        %td.center
+          = booking["driver"]["seater_number"]
+        %td.left
+          = booking["address"]
+
+

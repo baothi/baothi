@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Baothitesting
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = yield :head
+    = csrf_meta_tags
+  %body
+    #page-wrapper
+      #header
+        = render 'shared/header'
+      #page-container
+        #main-content
+          .ajax-loading.hidden= image_tag('common/loading.gif')
+          #flash-panel
+            = render partial: "shared/flash_messages", flash: flash
+          = yield
+      #footer
+        = render 'shared/footer'
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  = yield(:js)

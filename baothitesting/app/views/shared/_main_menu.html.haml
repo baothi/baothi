@@ -1,0 +1,6 @@
+- if session[:auth_token]
+  %ul
+    %li
+      = link_to "Booking", root_path
+    %li
+      = link_to "Your booking", booking_yourbooking_path

@@ -1,0 +1,35 @@
+%h2 Your booking
+- if @booking
+  %dl.dl-horizontal
+    %dt.title Taxi driver name:
+    %dd
+      = @booking["driver"]["name"]
+  %dl.dl-horizontal
+    %dt.title Phone number:
+    %dd
+      = @booking["driver"]["phone_number"]
+  %dl.dl-horizontal
+    %dt.title Gender of taxi driver:
+    %dd
+      = @booking["driver"]["gender"]
+  %dl.dl-horizontal
+    %dt.title Seater number:
+    %dd
+      = @booking["driver"]["seater_number"]
+  %dl.dl-horizontal
+    %dt.title Taxi company:
+    %dd
+      = @booking["driver"]["company"]
+  %dl.dl-horizontal
+    %dt.title Taxi number:
+    %dd
+      = @booking["driver"]["taxi_number"]
+  %dl.dl-horizontal
+    %dt.title Current location of taxi:
+    %dd
+      = @booking["driver"]["address"]
+  %dl.dl-horizontal
+    %dt.title Your booking location:
+    %dd
+      = @booking["address"]
+  

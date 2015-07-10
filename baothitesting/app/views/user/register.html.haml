@@ -1,0 +1,15 @@
+#register_frm
+  %h2 Regiser
+  = simple_form_for(:user, :url => user_create_path) do |f|
+    .field_box
+      = f.input :email
+    .field_box
+      = f.input :password
+    .field_box
+      = f.input :confirm_password
+    .field_box
+      = f.input :address
+    .form-actions.clear.center
+      = f.button :submit, :value => "Regiser"
+  #link_action.center
+    = link_to "Sign in", user_login_path, :id => "sign_in_link"

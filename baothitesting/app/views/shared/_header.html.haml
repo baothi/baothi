@@ -1,0 +1,15 @@
+#head-top
+  #logo
+    = link_to image_tag('common/Taxi_Circle_Blue.png'), root_path
+  #main_menu
+    = render 'shared/main_menu'
+  #head_menu
+    %ul
+      - if session[:auth_token]
+        %li
+          = link_to session[:email], "#"
+          |
+          = link_to "Logout", user_session_destroy_path
+      - else
+        %li
+          = link_to "Login", user_login_path

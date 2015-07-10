@@ -1,0 +1,19 @@
+- if session[:auth_token] 
+  %h2 Booking a taxi
+  = simple_form_for(:booking, :url => booking_create_path) do |f|
+    / = f.hidden_field :auth_token, :value => session[:auth_token]
+    .field_box
+      = f.input :seater_number, :label => "Seater number (4 or 7)"
+    .field_box
+      = f.input :address, :label => "Your current address"
+      %p.center ( EX: 80 Le Lai, Ben Thanh, Quan 1, Ho Chi Minh City, Vietnam )
+    .form-actions.clear.center
+      = f.button :submit, :value => "Save", :id => "btn_booking"
+
+- else
+  %h2.center WELCOME TO TAXI BOOKING SYSTEM
+  .center
+    %p
+      = link_to "Login to booking system", user_login_path
+    %p
+      = link_to "Regiser new account in booking system", user_register_path

@@ -1,0 +1,11 @@
+#login_frm
+  %h2 Login
+  = simple_form_for(:user, :url => user_session_new_path) do |f|
+    .field_box
+      = f.input :email
+    .field_box
+      = f.input :password
+    .form-actions.clear.center
+      = f.button :submit, :value => "Login"
+  #link_action.center
+    = link_to "Sign up", user_register_path, :id => "sign_up_link"

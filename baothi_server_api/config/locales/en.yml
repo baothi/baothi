@@ -21,3 +21,69 @@
 
 en:
   hello: "Hello world"
+  time:
+    format_normal: "%Y-%m-%d %H:%M:%S"
+    format: "%Y-%m-%d %H:%M"
+    format_time_zone: "%Y-%m-%d %H:%M:%S %:z"
+    short_format: "%Y-%m-%d"
+  adreess:
+    a: "10 Lê Lai, Bến Thành, Quận 1,Hồ Chí Minh, Vietnam"
+    b: "55 Nguyễn Văn Giai, Đa Kao, Hồ Chí Minh, Vietnam"
+    c: "10 Nguyễn Thái Học, Cầu Ông Lãnh, Quận 1,Hồ Chí Minh, Vietnam"
+    d: "1 Lê Duẩn, Bến Nghé, Quận 1,Hồ Chí Minh, Vietnam"
+    e: "500 Trần Hưng Đạo, Cầu Kho, Quận 1, Hồ Chí Minh, Vietnam"
+    f: "50 Trường Chinh, phường 13, Tân Bình, Hồ Chí Minh, Vietnam"
+    g: "10 Nguyễn Thị Thập, Bình Thuận, Quận 7, Hồ Chí Minh, Vietnam"
+    h: "10 Trương Định, Quận 3, Hồ Chí Minh, Vietnam"
+    j: "100 Trương Định, Quận 3, Hồ Chí Minh, Vietnam"
+    k: "10 Trần Quang Diệu, Quận 3, Hồ Chí Minh, Vietnam"
+    l: "50 Trần Văn Đang, Quận 3, Hồ Chí Minh, Vietnam"
+    m: "20 Lý Thường Kiệt, Tân Bình, Hồ Chí Minh, Vietnam"
+    n: "500 Cách Mạng Tháng 8, Quận ,Hồ Chí Minh, Vietnam"
+    o: "100 Phan Đăng Lưu, 3, Phú Nhuận, Hồ Chí Minh, Vietnam"
+    p: "10 Bạch Đằng, 2, Tân Bình,Hồ Chí Minh, Vietnam"
+  controller:
+    base_api:
+      render_error_not_found:
+        not_found: "Not found"
+        object_not_found: "%{obj} not found"
+      render_error_basic:
+        something_went_wrong: "Something went wrong!"
+      api_authenticate_user:
+        # error_token: "Error with your token"
+        error_token: "Your account is in use on another device."
+    common:
+      missing_param: "Missing parameter %{key}."
+      missing_params: "Missing parameters."
+      different_team: "Must be chosen with different team 1"
+      number_only: "Must be positive number"
+    registrations:
+      create:
+        successfully: "Sign up successfully!"
+        unsuccessfully: "Sign up unsuccessfully!"
+        device_used: "This device is used by another user. Please use a different one to sign up!"
+    sessions:
+      create:
+        successfully: "Sign in successfully!"
+        unsuccessfully: "Sign in unsuccessfully!"
+        wrong_username_or_password: "Incorrect username or password. Please try again."
+        blank_password: "Password can't be blank"
+        blank_email: "Email can't be blank"
+        blank_username: "Username can't be blank"
+        blank_email_password: "Email or password can't be blank"
+        wrong_password: "Password is invalid"
+        wrong_email: "Email is invalid"
+        device_used: "This device is used by another user. Please use a different one to sign in!"
+        wrong_device_token: "The device token is wrong!"
+      destroy:
+        successfully: "Sign out successfully!"
+        unsuccessfully: "Failed to signout!"
+    passwords:
+      changed_password:
+        successfully: "Changed password successfully!"
+        unsuccessfully: "Changed password unsuccessfully!"
+        wrong_password:  "The current password is incorrect"
+      forgot_password:
+        message_sent: "Your password has been reset, check your email to get that"
+        not_found: "Your email address does not exist. Please try again."
+
